@@ -11,3 +11,5 @@ CREATE TABLE sales (
   Total REAL,
 )
 
+INSERT INTO sales
+SELECT * FROM tmp_ventas;
