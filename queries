@@ -1,1 +1,13 @@
-DROP TABLE nombre_tabla;
+CREATE TABLE sales (
+  invoice_id INTEGER PRIMARY KEY,
+  Branch TEXT,
+  City TEXT,
+  Customer_type TEXT,
+  Gender TEXT,
+  Product_line TEXT,
+  Unit_price REAL,
+  Quantity INTEGER,
+  Tax REAL,
+  Total REAL,
+)
+
