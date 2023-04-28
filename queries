@@ -1,3 +1,4 @@
+/*crear tabla para luego migrar datos del csv dentro de ella*/
 CREATE TABLE sales (
   invoice_id INTEGER PRIMARY KEY,
   Branch TEXT,
@@ -11,5 +12,16 @@ CREATE TABLE sales (
   Total REAL,
 )
 
+
+DROP TABLE sales;
+
+ALTER TABLE sales ADD COLUM Date TEXT;
+ALTER TABLE sales ADD COLUMN Time INTEGER;
+ALTER TABLE sales ADD COLUMN Payment TEXT;
+ALTER TABLE sales ADD COLUMN cogs REAL;
+ALTER TABLE sales ADD COLUMN gross_margin_percentage REAL;
+ALTER TABLE sales ADD COLUMN gross_income REAL;
+ALTER TABLE sales ADD COLUMN Rating REAL;
+
 INSERT INTO sales
-SELECT * FROM tmp_ventas;
+SELECT * FROM tmp_sales
