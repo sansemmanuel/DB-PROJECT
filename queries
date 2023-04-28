@@ -9,17 +9,17 @@ CREATE TABLE sales (
   Unit_price TEXT,
   Quantity TEXT,
   Tax_5 TEXT,
-  Total TEXT,
+  Total TEXT
 )
 DROP TABLE sales;
 
 ALTER TABLE sales ADD COLUM Date TEXT;
-ALTER TABLE sales ADD COLUMN Time INTEGER;
+ALTER TABLE sales ADD COLUMN Time TEXT;
 ALTER TABLE sales ADD COLUMN Payment TEXT;
-ALTER TABLE sales ADD COLUMN cogs REAL;
-ALTER TABLE sales ADD COLUMN gross_margin_percentage REAL;
-ALTER TABLE sales ADD COLUMN gross_income REAL;
-ALTER TABLE sales ADD COLUMN Rating REAL;
+ALTER TABLE sales ADD COLUMN cogs TEXT;
+ALTER TABLE sales ADD COLUMN gross_margin_percentage TEXT;
+ALTER TABLE sales ADD COLUMN gross_income TEXT;
+ALTER TABLE sales ADD COLUMN Rating TEXT;
 
 INSERT INTO sales
 SELECT * FROM tmp_sales
