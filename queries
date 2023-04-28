@@ -1,6 +1,6 @@
 /*crear tabla para luego migrar datos del csv dentro de ella*/
 CREATE TABLE sales (
-  invoice_id INTEGER PRIMARY KEY,
+  Invoice ID INTEGER PRIMARY KEY,
   Branch TEXT,
   City TEXT,
   Customer_type TEXT,
@@ -8,11 +8,9 @@ CREATE TABLE sales (
   Product_line TEXT,
   Unit_price TEXT,
   Quantity TEXT,
-  Tax TEXT,
+  Tax_5 TEXT,
   Total TEXT,
-  )
-
-
+)
 DROP TABLE sales;
 
 ALTER TABLE sales ADD COLUM Date TEXT;
