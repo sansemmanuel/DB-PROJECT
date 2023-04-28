@@ -1,0 +1,8 @@
+/*city with most sales*/
+SELECT City, COUNT(*) AS total_sales
+FROM sales
+GROUP BY City
+ORDER BY total_sales DESC
+LIMIT 1;
+
+/*
