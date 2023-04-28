@@ -10,7 +10,7 @@ CREATE TABLE sales (
   Quantity TEXT,
   Tax TEXT,
   Total TEXT,
-)
+  )
 
 
 DROP TABLE sales;
