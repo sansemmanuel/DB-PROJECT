@@ -1,6 +1,6 @@
 /*crear tabla para luego migrar datos del csv dentro de ella*/
 CREATE TABLE sales (
-  Invoice ID INTEGER PRIMARY KEY,
+  Invoice_ID TEXT,
   Branch TEXT,
   City TEXT,
   Customer_type TEXT,
@@ -21,9 +21,9 @@ ALTER TABLE sales ADD COLUMN gross_margin_percentage TEXT;
 ALTER TABLE sales ADD COLUMN gross_income TEXT;
 ALTER TABLE sales ADD COLUMN Rating TEXT;
 
-INSERT INTO sales
+REPLACE INTO sales
 SELECT * FROM tmp_sales
 
 SELECT name, sql FROM sqlite_master WHERE type='table' AND name='sales';
 
-ALTER TABLE sales DROP CONSTRAINT Invoice;
+ALTER TABLE sales DROP CONSTRAINT Invoice_pk;
