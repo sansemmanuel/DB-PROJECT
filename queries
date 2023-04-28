@@ -5,4 +5,11 @@ GROUP BY City
 ORDER BY total_sales DESC
 LIMIT 1;
 
+/*type of products most sold for the city */
+SELECT Product_line, SUM(Quantity) AS total_sales
+FROM sales
+WHERE City = 'Yangon'
+GROUP BY Product_line
+ORDER BY total_sales DESC;
+
 /*
