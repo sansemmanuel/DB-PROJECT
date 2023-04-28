@@ -6,10 +6,10 @@ CREATE TABLE sales (
   Customer_type TEXT,
   Gender TEXT,
   Product_line TEXT,
-  Unit_price REAL,
-  Quantity INTEGER,
-  Tax REAL,
-  Total REAL,
+  Unit_price TEXT,
+  Quantity TEXT,
+  Tax TEXT,
+  Total TEXT,
 )
 
 
