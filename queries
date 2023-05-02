@@ -12,4 +12,3 @@ WHERE City = 'Yangon'
 GROUP BY Product_line
 ORDER BY total_sales DESC;
 
-/*

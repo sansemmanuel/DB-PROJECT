@@ -21,6 +21,9 @@ ALTER TABLE sales ADD COLUMN gross_margin_percentage TEXT;
 ALTER TABLE sales ADD COLUMN gross_income TEXT;
 ALTER TABLE sales ADD COLUMN Rating TEXT;
 
+/*eliminar columna de Invoice_ID para generar pk autoincrementable*/
+ALTER TABLE sales DROP COLUMN Invoice_ID;
+
 /**/
 ALTER TABLE sales ADD PRIMARY KEY (Invoice_ID);
 
