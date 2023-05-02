@@ -11,6 +11,8 @@ CREATE TABLE sales (
   Tax_5 TEXT,
   Total TEXT
 )
+
+/*editar columnas de la tabla para posterior migracion de datos desde csv*/
 ALTER TABLE sales ADD COLUMN Date TEXT;
 ALTER TABLE sales ADD COLUMN Time TEXT;
 ALTER TABLE sales ADD COLUMN Payment TEXT;
@@ -18,6 +20,9 @@ ALTER TABLE sales ADD COLUMN cogs TEXT;
 ALTER TABLE sales ADD COLUMN gross_margin_percentage TEXT;
 ALTER TABLE sales ADD COLUMN gross_income TEXT;
 ALTER TABLE sales ADD COLUMN Rating TEXT;
+
+/**/
+ALTER TABLE sales ADD PRIMARY KEY (Invoice_ID);
 
 /* reemplazar datos existentes por los de la tabla temporal para completar la migracion de datos .csv*/
 REPLACE INTO sales
