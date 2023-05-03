@@ -12,3 +12,11 @@ WHERE City = 'Yangon'
 GROUP BY Product_line
 ORDER BY total_sales DESC;
 
+/*total income top 3*/
+SELECT SUM(Total) AS Total_Income, City
+FROM sales
+GROUP BY City
+ORDER BY Total DESC
+LIMIT 3;
+
+
