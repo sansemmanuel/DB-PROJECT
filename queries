@@ -27,6 +27,13 @@ WHERE City IN ('Naypyitaw', 'Yangon', 'Mandalay')
 GROUP BY City
 ORDER BY total_cogs DESC;
 
+/* rating by product line*/
+SELECT AVG(Rating) AS avg_rating, City, Product_line
+FROM sales
+WHERE City IN ('Naypyitaw', 'Yangon', 'Mandalay')
+GROUP BY City, Product_line
+ORDER BY avg_rating DESC;
+
 
 
 
