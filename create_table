@@ -1,6 +1,6 @@
 /*crear tabla para luego migrar datos del csv dentro de ella*/
 CREATE TABLE sales (
-  Op_ID INTEGER PRIMARY KEY AUTOINCREMENT
+  Op_ID INTEGER PRIMARY KEY AUTOINCREMENT,
   Invoice_ID TEXT,
   Branch TEXT,
   City TEXT,
