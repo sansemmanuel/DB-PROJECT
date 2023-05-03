@@ -1,5 +1,6 @@
 /*crear tabla para luego migrar datos del csv dentro de ella*/
 CREATE TABLE sales (
+  Op_ID INTEGER PRIMARY KEY AUTOINCREMENT
   Invoice_ID TEXT,
   Branch TEXT,
   City TEXT,
@@ -25,8 +26,7 @@ ALTER TABLE sales ADD COLUMN Rating TEXT;
 ALTER TABLE sales DROP COLUMN Invoice_ID;
 
 /**/
-ALTER TABLE sales ADD PRIMARY KEY (Invoice_ID);
-
+DROP TABLE sales
 /* reemplazar datos existentes por los de la tabla temporal para completar la migracion de datos .csv*/
 REPLACE INTO sales
 SELECT * FROM tmp_sales
