@@ -28,3 +28,5 @@ REPLACE INTO sales('Invoice_ID','Branch','City','Customer_type','Gender','Produc
 SELECT * FROM tmp_sales
 
 
+
+

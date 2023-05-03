@@ -5,12 +5,13 @@ GROUP BY City
 ORDER BY total_sales DESC
 LIMIT 1;
 
-/*type of products most sold for the city */
-SELECT Product_line, SUM(Quantity) AS total_sales
+/*type of products most sold by city */
+SELECT Product_line, SUM(Quantity) AS total_sales, City
 FROM sales
-WHERE City = 'Yangon'
-GROUP BY Product_line
-ORDER BY total_sales DESC;
+WHERE City IN ('Naypyitaw', 'Yangon', 'Mandalay')
+GROUP BY Product_line, City
+ORDER BY total_sales, City ASC
+LIMIT 5;
 
 /*total income top 3*/
 SELECT SUM(Total) AS Total_Income, City
@@ -18,5 +19,14 @@ FROM sales
 GROUP BY City
 ORDER BY Total DESC
 LIMIT 3;
+
+/*total cogs top 3 cities*/
+SELECT SUM(cogs) AS total_cogs, City
+FROM sales
+WHERE City IN ('Naypyitaw', 'Yangon', 'Mandalay')
+GROUP BY City
+ORDER BY total_cogs DESC;
+
+
 
 
